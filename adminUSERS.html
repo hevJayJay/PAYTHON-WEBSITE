@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <link rel="stylesheet" href="adminUSERS.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="img/kok.png" alt="">
+            </div>
+            <ion-icon name="grid-outline" id="btn"></ion-icon>
+        </div>
+        <div class="user">
+            <img src="img/user.png" alt="" class="user-img">
+            <div>
+                <p class="bold">Mark A.</p>
+                <p>Admin</p>
+            </div>
+        </div>
+      <ul>
+        <li> <a href="adminLANDING.html"><ion-icon name="pie-chart-outline"></ion-icon> <span class="nav-item">Dashboard</span></a> <span class="tooltip">Dashboard</span></li>
+        <li> <a href="fees.html"><ion-icon name="add-outline"></ion-icon> <span class="nav-item">Fees</span></a><span class="tooltip">Fees</span</li>
+        <li> <a href="adminReceipt.html"><ion-icon name="receipt-outline"></ion-icon> <span class="nav-item">Receipt</span> </a><span class="tooltip">Receipt</span</li>
+        <li> <a href="adminUSERS.html"><ion-icon name="person-circle-outline"></ion-icon> <span class="nav-item">Users</span> </a><span class="tooltip">Users</span</li>
+        <li> <a href=""><ion-icon name="settings-outline"></ion-icon> <span class="nav-item">Settings</span></a> <span class="tooltip">Settings</span></li>
+        <li> <a href="index.html"><ion-icon name="eye-outline"></ion-icon> <span class="nav-item">UserSite</span></a> <span class="tooltip">User Site</span></li>
+        <li> <a href="login.html"><ion-icon name="log-out-outline"></ion-icon> <span class="nav-item">Logout</span></a> <span class="tooltip">Logout</span></li>
+      </ul>
+    </div>
+
+<section class="main-content" id="maincont">
+
+    <h1>User <span>List</span></h1>
+    <div id="filters">
+        <label for="course-filter">Course:</label>
+        <select id="course-filter">
+            <option value="">All</option>
+            <option value="CS">CS</option>
+            <option value="IT">IT</option>
+        </select>
+        <label for="section-filter">Section:</label>
+        <select id="section-filter">
+            <option value="">All</option>
+            <option value="1-A">1-A</option>
+            <option value="1-B">1-B</option>
+            <option value="1-C">1-C</option>
+            <option value="2A">2A</option>
+            <option value="2B">2B</option>
+            <option value="2C">2C</option>
+            <option value="3A">3A</option>
+            <option value="3B">3B</option>
+            <option value="3C">3C</option>
+            <option value="4A">4A</option>
+            <option value="4B">4B</option>
+            <option value="4C">4C</option>
+        </select>
+    </div>
+    <table id="user-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Section</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="user-list">
+            <!-- User data will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    
+</section>
+<script>
+       let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function(){
+        sidebar.classList.toggle('active');
+    };
+
+</script>
+<script src="adminUSERS.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

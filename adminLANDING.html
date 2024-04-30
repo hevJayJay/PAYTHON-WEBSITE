@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="img/kok.png" alt="">
+            </div>
+            <ion-icon name="grid-outline" id="btn"></ion-icon>
+        </div>
+        <div class="user">
+            <img src="img/user.png" alt="" class="user-img">
+            <div>
+                <p class="bold">Mark A.</p>
+                <p>Admin</p>
+            </div>
+        </div>
+      <ul>
+        <li> <a href="#"><ion-icon name="pie-chart-outline"></ion-icon> <span class="nav-item">Dashboard</span></a> <span class="tooltip">Dashboard</span></li>
+        <li> <a href="fees.html"><ion-icon name="add-outline"></ion-icon> <span class="nav-item">Fees</span></a><span class="tooltip">Fees</span</li>
+        <li> <a href="adminReceipt.html"><ion-icon name="receipt-outline"></ion-icon> <span class="nav-item">Receipt</span> </a><span class="tooltip">Receipt</span</li>
+        <li> <a href="adminUSERS.html"><ion-icon name="person-circle-outline"></ion-icon> <span class="nav-item">Users</span> </a><span class="tooltip">Users</span</li>
+        <li> <a href=""><ion-icon name="settings-outline"></ion-icon> <span class="nav-item">Settings</span></a> <span class="tooltip">Settings</span></li>
+        <li> <a href="index.html"><ion-icon name="eye-outline"></ion-icon> <span class="nav-item">UserSite</span></a> <span class="tooltip">User Site</span></li>
+        <li> <a href="login.html"><ion-icon name="log-out-outline"></ion-icon> <span class="nav-item">Logout</span></a> <span class="tooltip">Logout</span></li>
+      </ul>
+    </div>
+
+<section class="main-content" id="maincont">
+
+
+    <h1>Dash<span>board</span></h1>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="people-outline"></ion-icon>
+            <div>
+                <h3>772</h3>
+                <span>Current Users</span>
+            </div>
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="bag-outline"></ion-icon>
+            <div>
+                <h3>₱35000</h3>
+                <span>Total Fees Collected</span>
+            </div>
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="cash-outline"></ion-icon>
+            <div>
+                <h3>₱5000</h3>
+                <span>Venom Fee</span>
+            </div>
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="cash-outline"></ion-icon>
+            <div>
+                <h3>₱12000</h3>
+                <span>CSC FEE</span>
+            </div>
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="cash-outline"></ion-icon>
+            <div>
+                <h3>₱10000</h3>
+                <span>Gender Club Fee</span>
+            </div>
+        </div>
+    </div>
+    <div class="values">
+        <div class="val-box">
+            <ion-icon name="cash-outline"></ion-icon>
+            <div>
+                <h3>₱8000</h3>
+                <span>Current Users</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bigbox">
+        <span class="recents">Recent Collection</span>
+        <div class="text-box">
+            <div class="row">
+                <div class="col">Name</div>
+                <div class="col">Transaction ID</div>
+                <div class="col">Amount</div>
+                <div class="col">Date</div>
+            </div>
+            <div class="row">
+                <div class="col">Jomark Abello</div>
+                <div class="col">#123456789</div>
+                <div class="col">₱350</div>
+                <div class="col">2024-04-29</div>
+            </div>
+            <div class="row">
+                <div class="col">Matthew Lim</div>
+                <div class="col">#987654321</div>
+                <div class="col">₱100</div>
+                <div class="col">2024-04-27</div>
+            </div>
+            <div class="row">
+                <div class="col">Mosses Ramos</div>
+                <div class="col">#456789012</div>
+                <div class="col">₱650</div>
+                <div class="col">2024-04-24</div>
+            </div>
+            <div class="row">
+                <div class="col">Marie Abao</div>
+                <div class="col">#232436789</div>
+                <div class="col">₱50</div>
+                <div class="col">2024-04-22</div>
+            </div>
+            <div class="row">
+                <div class="col">Datu Emir</div>
+                <div class="col">#232957849</div>
+                <div class="col">₱600</div>
+                <div class="col">2024-04-22</div>
+            </div>
+            <div class="row">
+                <div class="col">Kaito Nishitani</div>
+                <div class="col">#782469581</div>
+                <div class="col">₱400</div>
+                <div class="col">2024-04-21</div>
+            </div>
+            <div class="row">
+                <div class="col">Lourence Devila</div>
+                <div class="col">#462891375</div>
+                <div class="col">₱200</div>
+                <div class="col">2024-04-21</div>
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+<script>
+       let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function(){
+        sidebar.classList.toggle('active');
+    };
+
+</script>
+<script src="admin.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

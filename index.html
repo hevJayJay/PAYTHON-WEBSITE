@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paython</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/cs.png" class="logo"  alt="logo">
+        <nav>
+         <ul class="nav-link">
+             <li><a href="#home">Home</a></li>
+             <li><a href="#about">About</a></li>
+             <li><a href="#contact">Contact</a></li>
+             <li><a href="history.html" target="_blank">Receipt</a></li>
+         </ul>
+        </nav>
+        <div>
+        <img src="img/user.png" class="user-pic" onclick="toggleMenu()">
+        </div>
+        
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="img/user.png">
+                    <h3>Jomark Abello</h3>
+                </div>
+                <hr>
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="img/profile.png" alt=""> <p> Edit Profile</p> 
+                    <span>></span> 
+                </a>
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="img/setting.png" alt=""> <p> Settings</p> 
+                    <span>></span> 
+                </a>
+                <a href="login.html" class="sub-menu-link">
+                    <img src="img/logout.png" alt=""> <p> Logout</p> 
+                    <span>></span> 
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div id="home" class="BIG">
+            <div class="comp">
+            <h1>College Of Computing <br>Studies<span class="online"> Online Collection<span></span></h1>
+            <p>Welcome to Paython! Easily manage your student fees with our platform. <br> 
+                Stay on top of your student payment obligations and Join us today and simplify your student <br>payment experience. <a href="#how" class="learn">Learn How</a></p>
+           <a onclick="openModal()" class="now">Pay Now</a>
+            </div>
+            <div>
+                <img src="img/money-removebg-preview.png"  class="money" >
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="modal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2>Payment Form</h2>
+              
+              <form id="paymentForm" target="_blank">
+
+                <label class="secs">FEES:</label><br>
+                
+                <input type="hidden" id="venom_fee" name="venom_fee" value="50">
+                <label for="venom_fee">VENOM Fee: PHP 50</label><br>
+                
+                <input type="hidden" id="csc_fee" name="csc_fee" value="300">
+                <label for="csc_fee">CSC Fee: PHP 300</label><br>
+                
+                <input type="hidden" id="gender_club_fee" name="gender_club_fee" value="200">
+                <label for="gender_club_fee">Gender Club Fee: PHP 200</label><br>
+                
+                <input type="hidden" id="psits_fee" name="psits_fee" value="100">
+                <label for="psits_fee">PSITS Fee: PHP 100</label><br><br>
+            
+                <label for="gcashMobileNumber">GCash Mobile Number:</label>
+                <input type="text" id="gcashMobileNumber" name="gcashMobileNumber" required><br><br>
+              
+                <label for="gcashAmount">Amount to Transfer (PHP):</label>
+                <input type="number" id="gcashAmount" name="gcashAmount" min="1" required><br><br>
+                
+                <input type="submit" value="Pay Now">
+            </form>
+            </div>
+          </div>
+
+
+        <div id="about">
+            <h1 class="about">About <span class="us">US</span></h1>
+            <div class="inside">
+                <div class="inside-about">
+                    <div>
+                <img src="/img/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg" alt="laptop">
+            </div>
+                <p><span>PAYTHON</span> is your straightforward solution for managing student fees hassle-free. We're dedicated to simplifying the payment process for students in <span>CCS</span>.
+
+                    <br><br>With a focus on simplicity and ease of use, our platform allows students to make payments effortlessly and College to streamline their fee collection process.
+                    
+                    <br> <br>Join us at <span>PAYTHON</span>  and let's work together to ensure every student's payment journey is a successful one.</p>
+                 </div>
+            </div>
+        </div>
+
+        <div id="how" >
+            <h1 class="how-to">How To<span> Pay</span></h1>
+            <div class="box-head">
+                <div class="box">
+                    <div class="text-box"><span>Step 1: CLICK</span>
+                        <img src="img/TRY.png" alt="tutorial"></div>
+                    <div class="text-box"><span>Step 2: OPEN</span>
+                        <img src="img/step2.png" alt="tutorial"></div>
+                    <div class="text-box"><span>Step 3: FILL UP</span>
+                        <img src="img/fill.png" alt="tutorial"></div>
+                </div>
+                <div class="box">
+                    <div class="text-box"><span>Step 4: CLICK PAY</span>
+                        <img src="img/FORT.png" alt="tutorial"></div>
+                    <div class="text-box"><span>Step 5:</span>
+                        <img src="img/RISIP.png" id="aymg"alt="tutorial">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+            <form action="">
+                <h1>Send us a <span>Message</span></h1>
+                <input type="text" id="FirstName" placeholder="First Name" required>
+                <input type="text" id="LastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="mobile" pattern="[0-9]*" inputmode="numeric" placeholder="Mobile number" required>
+                <h4>Type Your Message Here...</h4>
+                <textarea required></textarea>
+                <input type="submit" value="Send" id="button">
+            </form>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="/img/PAYTHON-removebg-preview.png" alt="">
+        <div>
+            <ul class="ul-footer">
+                <h3>Browse</h3>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#receipt">Receipt</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><ion-icon name="location-outline"></ion-icon>   Normal Road, Baliwasan Zamboanga City, Philippines</p>
+            <p><ion-icon name="mail-outline"></ion-icon>   Paython@gmail.com</p>
+            <p><ion-icon name="call-outline"></ion-icon>   +63 965-568-4702</p>
+        </div>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

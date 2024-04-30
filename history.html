@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt History</title>
+<link rel="stylesheet" href="history.css">
+</head>
+<body>
+<div class="receipt-container">
+  <div class="top">
+    <img src="img/ccswmsu-removebg-preview.png" alt="CCSWMSU Logo">
+    <h2>Payment Receipt</h2>
+  </div>
+
+  <div id="receipt" class="receipt"></div>
+
+  <script>
+    const receiptData = JSON.parse(localStorage.getItem('receipt'));
+
+    if (receiptData) {
+      const receiptElement = document.getElementById('receipt');
+      let receiptContent = '<h3>Payment Receipt</h3>';
+      receiptContent += `<p>Name: ${receiptData.name}</p>`;
+      receiptContent += `<p>Course: ${receiptData.course}</p>`;
+      receiptContent += `<p>Section: ${receiptData.section}</p>`;
+      receiptContent += '<p>FEES:</p>';
+      
+      // Hardcoded sectors
+      receiptContent += '<p>Venom Fee: PHP 50</p>';
+      receiptContent += '<p>CSC Fee: PHP 300</p>';
+      receiptContent += '<p>Gender Club Fee: PHP 200</p>';
+      receiptContent += '<p>PSITS Fee: PHP 100</p>';
+      
+      receiptContent += `<p>Total Amount Paid: PHP ${receiptData.totalAmount}</p>`;
+      receiptContent += `<p>Transaction ID: ${receiptData.transactionID}</p>`;
+      
+      receiptElement.innerHTML = receiptContent;
+    } else {
+      const receiptElement = document.getElementById('receipt');
+      receiptElement.textContent = 'No receipt found.';
+    }
+  </script>
+</div>
+</body>
+</html>

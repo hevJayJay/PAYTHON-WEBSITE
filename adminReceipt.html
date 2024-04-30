@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <link rel="stylesheet" href="receipt.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="img/kok.png" alt="">
+            </div>
+            <ion-icon name="grid-outline" id="btn"></ion-icon>
+        </div>
+        <div class="user">
+            <img src="img/user.png" alt="" class="user-img">
+            <div>
+                <p class="bold">Mark A.</p>
+                <p>Admin</p>
+            </div>
+        </div>
+      <ul>
+        <li> <a href="adminLANDING.html"><ion-icon name="pie-chart-outline"></ion-icon> <span class="nav-item">Dashboard</span></a> <span class="tooltip">Dashboard</span></li>
+        <li> <a href="fees.html"><ion-icon name="add-outline"></ion-icon> <span class="nav-item">Fees</span></a><span class="tooltip">Fees</span</li>
+        <li> <a href="adminReceipt.html"><ion-icon name="receipt-outline"></ion-icon> <span class="nav-item">Receipt</span> </a><span class="tooltip">Receipt</span</li>
+        <li> <a href="adminUSERS.html"><ion-icon name="person-circle-outline"></ion-icon> <span class="nav-item">Users</span> </a><span class="tooltip">Users</span</li>
+        <li> <a href=""><ion-icon name="settings-outline"></ion-icon> <span class="nav-item">Settings</span></a> <span class="tooltip">Settings</span></li>
+        <li> <a href="index.html"><ion-icon name="eye-outline"></ion-icon> <span class="nav-item">UserSite</span></a> <span class="tooltip">User Site</span></li>
+        <li> <a href="login.html"><ion-icon name="log-out-outline"></ion-icon> <span class="nav-item">Logout</span></a> <span class="tooltip">Logout</span></li>
+      </ul>
+    </div>
+
+<section class="main-content" id="maincont">
+    <h1>Transaction <span>Receipt</span></h1>
+   
+        <div class="text-box">
+            <div class="row">
+                <div class="col">Name</div>
+                <div class="col">Transaction ID</div>
+                <div class="col">Amount</div>
+                <a href="" class="no">Check</a>
+            </div>
+            <div class="row">
+                <div class="col">Jomark Abello</div>
+                <div class="col"> 8n4oMrkm</div>
+                <div class="col">650</div>
+                <a href="history.html" class="now">Check</a>
+            </div>
+        </div>
+
+</section>
+<script>
+       let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function(){
+        sidebar.classList.toggle('active');
+    };
+
+
+    function rowClicked() {
+   
+    window.location.href = "receipt_page.html";
+}
+</script>
+<script src="admin.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

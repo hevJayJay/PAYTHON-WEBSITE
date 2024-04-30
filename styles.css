@@ -1,0 +1,479 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: whitesmoke;
+    font-family: "Roboto Slab", serif;
+}
+#home{
+    background-color: rgb(17, 36, 50);
+    height: 50vh;
+}
+#about{
+    height: 60vh;
+}
+#how{
+    height: 75vh;
+}
+#contact{
+    height: 70vh;
+}
+/* || header || */
+.logo{
+    padding: 5px;
+    height: 50px;
+    width: 80px;
+    margin-right: auto;
+    margin-left: 100px;
+    background: transparent;
+
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    padding: 5px;
+    top: 0;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+
+.nav-link {
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-link li {
+     display: inline-block;
+     padding: 0px 10px;
+}
+
+.nav-link li:last-child {
+   margin-right: 50px;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    color:rgb(17, 36, 50); 
+}
+header div{
+    margin-right: 100px;
+}
+/* || header || */
+
+
+/* || user drop down || */
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background: whitesmoke;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h3{
+    font-weight: 500;
+}
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0  10px;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px ;
+}
+.sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+    
+}
+.sub-menu-link p{
+    width: 100%;
+}
+.sub-menu-link span{
+    font-size: 12px;
+    transform: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+    font-size: 20px;
+    color: rgb(0, 204, 0);
+}
+.sub-menu-link:hover p{
+    font-weight: 700;
+    color: rgb(0, 204, 0);
+}
+
+
+/* || user drop down || */
+
+
+/* || MAIN || */
+
+/* ||  top || */
+
+.BIG{
+    display: flex;
+    justify-content: space-around;
+}
+.online{
+    color: rgb(0, 204, 0);
+}
+.comp{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    margin-left: 60px;
+
+}
+.comp h1{
+    font-size: 45px;
+    margin-top: 12vh;  
+    line-height: 50px;
+    color: whitesmoke;
+}
+.comp p{
+    color: whitesmoke;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: justify;
+}
+.now{
+    width: 30%;
+    padding: 12px 22px;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color:  rgb(0, 204, 0) ;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.now:hover{
+    background-color: rgba(0, 204, 0, 0.7);
+}
+.learn{
+    text-decoration: none;
+    color: rgb(21, 235, 21);
+}
+.money{
+    margin-top: 12vh;
+    margin-right: 60px;
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* ||  top || */
+
+/* ||  about us || */
+.about{
+    text-align: center;
+    margin-top: 20px;
+}
+.inside{
+display: flex;
+flex-flow: row;
+margin: 0px 200px;
+margin-top: 30px;
+height: 250px;
+}
+.about span{
+    color: rgb(0, 204, 0);
+}
+.inside-about{
+    gap: 10px;
+}
+.inside-about img{
+    height: 275px;
+    border-radius: 20px;
+    width: 50%;
+    float: left;
+    margin-right: 50px;
+}
+.inside-about p{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 200;
+  
+}
+.inside-about span{
+        color: rgb(0, 204, 0);
+        font-weight: 800;
+}
+
+/* ||  about us || */
+
+/* || how || */
+#how{
+    background-color: rgb(17, 36, 50);
+
+} 
+.box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    gap: 2rem;
+    
+}
+.how-to{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+}
+.how-to span{
+    color:  rgb(0, 204, 0) ;
+}
+.box{
+    display: flex;
+    gap: 7rem;
+}
+.text-box{
+    gap: 5px;
+    color: whitesmoke;
+    height: 200px;
+    width: 300px;
+    box-shadow: 1px 1px 4px  rgb(0, 204, 0);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+.text-box span{
+    position: absolute;
+    top: 5%;
+    color:  whitesmoke;
+    margin-left: 5%;
+    
+}
+.text-box p{
+    font-size: 15px;
+    margin: 0px 5px;
+    font-weight: 300;
+}
+.text-box img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+#aymg{
+    height: 70%;
+}
+/* || how || */
+
+/* || contact || */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(0, 150, 0)  ;
+    height: 70vh;
+}
+.container form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: rgb(17, 36, 50);
+    flex-wrap: wrap;
+}
+.container form h1{
+    color: whitesmoke;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    text-align: center;
+}
+.container form h1 span{
+    color: rgb(0, 204, 0);
+}
+.container form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+.container form #LastName,
+.container form #mobile{
+    margin-left: 20px;
+}
+.container form h4{
+    color:rgb(0, 255, 0);
+    font-weight: 200;
+    width: 600px;
+    margin-top: 20px;
+}
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-weight: 200;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+    overflow-y: scroll;
+}
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color:  rgba(0, 204, 0, 0.7);
+    cursor: pointer;
+}
+.container form textarea::-webkit-scrollbar-track {
+    background-color: rgba(246, 240, 240, .1); 
+}
+.container form #button{
+    border: none;
+    background: rgb(0, 204, 0);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: whitesmoke;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+.container form #button:hover{
+    opacity: 0.7;
+}
+/* || contact || */
+
+/* || footer || */
+footer{
+    height: 30vh;
+    background-color: rgb(17, 36, 50);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+}
+footer img{
+    height: 225px;
+    background: transparent;
+}
+.ul-footer{
+    text-decoration: none;
+    list-style-type: none;
+    color: whitesmoke;
+}
+a{
+    text-decoration: none;
+}
+/* || footer || */
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal h2{
+    color:  rgb(0, 204, 0);
+  }
+  #paymentForm input[type="submit"]{
+    font-weight: bold;
+    color: whitesmoke;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 70px;
+    background-color: rgb(0, 204, 0);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50vh;
+    background-color:  rgb(17, 36, 50);
+    color: whitesmoke;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .secs{
+    margin-bottom: 10px;
+  }
+
+
+  /* || admin || */
+  
